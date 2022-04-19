@@ -1,22 +1,14 @@
 // =========завдання №1=========
 
-// const navEl = document.querySelectorAll('.item');
-// console.log('Number of categories:', navEl.length);
+const categoriesEl = document.querySelectorAll('.item');
+console.log('Number of categories:', categoriesEl.length);
 
-// const navElAnimal = document.querySelector('.animals');
-// const navElAnimalLength = navElAnimal.children.length;
-// console.log(`Category: Animals
-// Elements:${navElAnimalLength}`);
+const amountEl = document.querySelectorAll(".item > ul");
+amountEl.forEach(category => {
+  console.log(`Category:${category.previousElementSibling.textContent}`);
+ console.log(`Elements:${category.children.length}`)
+})
 
-// const navElProducts = document.querySelector('.products');
-// const navElProductsLength = navElProducts.children.length;
-// console.log(`Category: Products
-// Elements:${navElProductsLength}`);
-
-// const navElTechnologies = document.querySelector('.technologies');
-// const navElTechnologiesLength = navElTechnologies.children.length;
-// console.log(`Category: Technologies
-// Elements:${navElTechnologiesLength}`);
 
 // =========завдання №2=========
 
@@ -39,5 +31,51 @@ const addElement = ingredients.map(text => {
 });
 
 
-console.log(addLi);
+// console.log(addLi);
 addLi.append(...addElement);
+
+
+// =========завдання №3=========
+const images = [
+  {
+    url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
+    alt: "White and Black Long Fur Cat",
+  },
+  {
+    url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
+    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
+  },
+  {
+    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
+    alt: "Group of Horses Running",
+  },
+];
+
+
+const galleryEl = document.querySelector(".gallery");
+galleryEl.style.display = "flex";
+galleryEl.style.justifyContent = "space-around";
+// console.log(galleryEl);
+
+const imagesEl = images.map((image )=> `<li> <img src = ${image.url}  alt = ${image.alt} width = 360px ></li>`)
+  .join("");
+// console.log(imagesEl);
+galleryEl.insertAdjacentHTML("afterbegin", imagesEl);
+  
+// =========завдання №4=========
+
+
+const counterValue = function () {
+  document.querySelector("#value")
+};
+// console.log( counterValue)
+const incrementEl = function (value) { 
+  value += 1;
+  document.querySelector('[increment]');
+};
+// console.log( incrementEl)
+const decrementEl = function (value) {
+  value -= 1;
+  document.querySelector('[decrement]');
+ };  
+// console.log( decrementEl)
