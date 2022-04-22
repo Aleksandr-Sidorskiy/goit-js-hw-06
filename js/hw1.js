@@ -1,13 +1,13 @@
 // =========завдання №1=========
 
-const categoriesEl = document.querySelectorAll('.item');
-console.log('Number of categories:', categoriesEl.length);
+// const categoriesEl = document.querySelectorAll('.item');
+// console.log('Number of categories:', categoriesEl.length);
 
-const amountEl = document.querySelectorAll(".item > ul");
-amountEl.forEach(category => {
-  console.log(`Category:${category.previousElementSibling.textContent}`);
- console.log(`Elements:${category.children.length}`)
-})
+// const amountEl = document.querySelectorAll(".item > ul");
+// amountEl.forEach(category => {
+//   console.log(`Category:${category.previousElementSibling.textContent}`);
+//  console.log(`Elements:${category.children.length}`)
+// })
 
 
 // =========завдання №2=========
@@ -64,18 +64,32 @@ galleryEl.insertAdjacentHTML("afterbegin", imagesEl);
   
 // =========завдання №4=========
 
+const btns = document.querySelector("#counter");
+const value = document.querySelector("#value");
+const decrement = btns.firstElementChild;
+const increment = btns.lastElementChild;
+let number = 0;
 
-const counterValue = function () {
-  document.querySelector("#value")
-};
-// console.log( counterValue)
-const incrementEl = function (value) { 
-  value += 1;
-  document.querySelector('[increment]');
-};
-// console.log( incrementEl)
-const decrementEl = function (value) {
-  value -= 1;
-  document.querySelector('[decrement]');
- };  
-// console.log( decrementEl)
+increment.addEventListener("click",function(){
+ number += 1;
+  value.innerHTML = number;
+      }      
+);
+decrement.addEventListener('click',function() {
+  number -= 1;
+  value.innerHTML = number;
+})
+  // =========завдання №5=========
+
+const inputEl = document.querySelector("#name-input");
+const outputEl = document.querySelector("#name-output");
+
+inputEl.addEventListener('input', (event) =>
+  outputEl.textContent = event.currentTarget.value);
+
+
+  // =========завдання №6=========
+  // =========завдання №7=========
+  // =========завдання №8=========
+  // =========завдання №9=========
+  // =========завдання №10=========
