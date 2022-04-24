@@ -1,13 +1,13 @@
 // =========завдання №1=========
 
-// const categoriesEl = document.querySelectorAll('.item');
+const categoriesEl = document.querySelectorAll('.item');
 // console.log('Number of categories:', categoriesEl.length);
 
-// const amountEl = document.querySelectorAll(".item > ul");
-// amountEl.forEach(category => {
+const amountEl = document.querySelectorAll(".item > ul");
+amountEl.forEach(category => {
 //   console.log(`Category:${category.previousElementSibling.textContent}`);
 //  console.log(`Elements:${category.children.length}`)
-// })
+})
 
 
 // =========завдання №2=========
@@ -89,7 +89,65 @@ inputEl.addEventListener('input', (event) =>
 
 
   // =========завдання №6=========
+
+const validationInputEl = document.querySelector('#validation-input');
+
+validationInputEl.addEventListener("blur", () => {
+  console.log(validationInputEl.value.length);
+  if (validationInputEl.getAttribute('data-length') >= validationInputEl.value.length) { 
+    validationInputEl.classList.remove('valid');
+    validationInputEl.classList.add('invalid');
+  } else {
+    validationInputEl.classList.remove('invalid');
+    validationInputEl.classList.add('valid');
+  }
+});
+
+
   // =========завдання №7=========
+
+const inputElm = document.querySelector('#font-size-control');
+const textEl = document.querySelector('#text');
+
+inputElm.addEventListener("input", handleInputRange);
+function handleInputRange(event) {
+  textEl.style.fontSize = event.currentTarget.value + "px";
+}
   // =========завдання №8=========
+
+const formEl = document.querySelector('.login-form');
+formEl.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const {
+    elements: { email, password }
+  } = event.currentTarget;
+  if (email.value === "" || password.value === "") {
+    return console.log("Please fill in all the fields!");
+  }
+  console.log(`email: ${email.value},Password: ${password.value}`);
+  event.currentTarget.reset();
+});
+
   // =========завдання №9=========
+
+const widgetEl = document.querySelector(".widget");
+const сhangeColorEl = document.querySelector(".change-color");
+const colorEl = document.querySelector(".color");
+
+сhangeColorEl.addEventListener("click", onApplicationBackgraundColor);
+
+function onApplicationBackgraundColor() {
+  // document.body.style.backgroundColor = getRandomHexColor(); изменяет фон на body
+  widgetEl.style.backgroundColor = getRandomHexColor();
+  return colorEl.textContent = getRandomHexColor()
+  
+}
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
+
+
   // =========завдання №10=========
