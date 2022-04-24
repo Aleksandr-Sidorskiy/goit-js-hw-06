@@ -9,68 +9,103 @@
   </head>
   <body>
     <!-- Задание №1 -->
-    <ul id="categories">
-      <li class="item">
-        <h2>Animals</h2>
-        <ul>
-          <li>Cat</li>
-          <li>Hamster</li>
-          <li>Horse</li>
-          <li>Parrot</li>
-        </ul>
-      </li>
-      <li class="item">
-        <h2>Products</h2>
-        <ul>
-          <li>Bread</li>
-          <li>Prasley</li>
-          <li>Cheese</li>
-        </ul>
-      </li>
-      <li class="item">
-        <h2>Technologies</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-        </ul>
-      </li>
-    </ul>
+    <div class="section container">
+      <ul id="categories">
+        <li class="item">
+          <h2>Animals</h2>
+          <ul>
+            <li>Cat</li>
+            <li>Hamster</li>
+            <li>Horse</li>
+            <li>Parrot</li>
+          </ul>
+        </li>
+        <li class="item">
+          <h2>Products</h2>
+          <ul>
+            <li>Bread</li>
+            <li>Prasley</li>
+            <li>Cheese</li>
+          </ul>
+        </li>
+        <li class="item">
+          <h2>Technologies</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
 
     <!-- Задание №2 -->
-
-    <ul id="ingredients"></ul>
+    <div class="section container">
+      <ul id="ingredients"></ul>
+    </div>
 
     <!-- Задание №3 -->
-
-    <ul class="gallery"></ul>
+    <div class="section container">
+      <ul class="gallery"></ul>
+    </div>
 
     <!-- Задание №4 -->
-
-    <div id="counter">
-      <button type="button" data-action="decrement">-1</button>
-      <span id="value">0</span>
-      <button type="button" data-action="increment">+1</button>
+    <div class="section container">
+      <div id="counter">
+        <button type="button" data-action="decrement">-1</button>
+        <span id="value">0</span>
+        <button type="button" data-action="increment">+1</button>
+      </div>
     </div>
-    <!-- Задание №5 -->
 
-    <input type="text" id="name-input" placeholder="Please enter your name" />
-    <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
+    <!-- Задание №5 -->
+    <div class="section container">
+      <input type="text" id="name-input" placeholder="Please enter your name" />
+      <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
+    </div>
 
     <!-- Задание №6 -->
+    <div class="section container">
+      <input
+        type="text"
+        id="validation-input"
+        data-length="6"
+        placeholder="Please enter 6 symbols"
+      />
+    </div>
 
-    <input
-      type="text"
-      id="validation-input"
-      data-length="6"
-      placeholder="Please enter 6 symbols"
-    />
     <!-- Задание №7 -->
+
+    <div class="section container">
+      <input id="font-size-control" type="range" min="16" max="96" />
+      <br />
+      <span id="text">Abracadabra!</span>
+    </div>
     <!-- Задание №8 -->
+    <div class="section container">
+      <form class="login-form">
+        <label>
+          Email
+          <input type="email" name="email" />
+        </label>
+        <label>
+          Password
+          <input type="password" name="password" />
+        </label>
+        <button type="submit">Login</button>
+      </form>
+    </div>
     <!-- Задание №9 -->
+    <div class="section container">
+      <div class="widget">
+        <p>Background color: <span class="color">-</span></p>
+        <button type="button" class="change-color">Change color</button>
+      </div>
+    </div>
     <!-- Задание №10 -->
+    <div class="section container"></div>
 
     <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     <script src="./js/hw1.js"></script>
