@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+  </head>
+  <body>
+    <!-- Задание №8 -->
+    <div class="section container">
+      <form class="login-form">
+        <label>
+          Email
+          <input type="email" name="email" />
+        </label>
+        <label>
+          Password
+          <input type="password" name="password" />
+        </label>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <script>
+      // =========завдання №8=========
+
+      const formEl = document.querySelector(".login-form");
+      formEl.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const {
+          elements: { email, password },
+        } = event.currentTarget;
+        if (email.value === "" || password.value === "") {
+          return console.log("Please fill in all the fields!");
+        }
+        console.log(`email: ${email.value},Password: ${password.value}`);
+        event.currentTarget.reset();
+      });
+    </script>
+  </body>
+</html>
