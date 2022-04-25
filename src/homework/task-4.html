@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+  </head>
+  <body>
+    <!-- Задание №4 -->
+    <div class="section container">
+      <div id="counter">
+        <button type="button" data-action="decrement">-1</button>
+        <span id="value">0</span>
+        <button type="button" data-action="increment">+1</button>
+      </div>
+    </div>
+    <script>
+      // =========завдання №4=========
+
+      const btns = document.querySelector("#counter");
+      const value = document.querySelector("#value");
+      const decrement = btns.firstElementChild;
+      const increment = btns.lastElementChild;
+      let number = 0;
+
+      increment.addEventListener("click", function () {
+        number += 1;
+        value.innerHTML = number;
+      });
+      decrement.addEventListener("click", function () {
+        number -= 1;
+        value.innerHTML = number;
+      });
+    </script>
+  </body>
+</html>
