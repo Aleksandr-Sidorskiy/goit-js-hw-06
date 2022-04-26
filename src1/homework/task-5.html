@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+  </head>
+  <body>
+    <!-- Задание №5 -->
+    <div class="section container">
+      <input type="text" id="name-input" placeholder="Please enter your name" />
+      <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
+    </div>
+
+    <script>
+      // =========завдання №5=========
+
+      const inputEl = document.querySelector("#name-input");
+      const outputEl = document.querySelector("#name-output");
+
+      inputEl.addEventListener(
+        "input",
+        (event) => (outputEl.textContent = event.currentTarget.value)
+      );
+    </script>
+  </body>
+</html>
