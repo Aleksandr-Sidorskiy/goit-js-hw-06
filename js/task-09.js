@@ -6,9 +6,9 @@ const colorEl = document.querySelector(".color");
 сhangeColorEl.addEventListener("click", onApplicationBackgraundColor);
 
 function onApplicationBackgraundColor() {
-  const color = getRandomHexColor();
-  widgetEl.style.backgroundColor = color;
-  return colorEl.textContent = color;
+  const colorRandom = getRandomHexColor();
+  widgetEl.style.backgroundColor = colorRandom;
+  return colorEl.textContent = colorRandom;
   
 }
 
